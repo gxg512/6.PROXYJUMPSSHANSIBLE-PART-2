@@ -1,0 +1,12 @@
+#ip of the bastion
+Host jump-host
+   HostName 192.168.1.6
+   User centos
+   IdentityFile ~/.ssh/id_rsa
+
+# ip of the nodes in cloud
+Host target-host
+   HostName 10.0.2.15
+   ProxyJump jump-host
+   User centos
+   IdentityFile ~/.ssh/id_rsa

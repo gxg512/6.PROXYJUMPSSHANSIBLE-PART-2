@@ -1,0 +1,12 @@
+---
+- name: run this playbook via proxy jump ssh
+  hosts: clients
+  become: true
+  become_user: centos
+  tasks:
+  - name: "Touch a file, using symbolic modes to set the permissions (equivalent to 0644)"
+    ansible.builtin.file:
+      path: /tmp/proxyssh.conf
+      state: touch
+        # owner: centos
+        #group: centos
