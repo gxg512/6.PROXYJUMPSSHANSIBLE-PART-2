@@ -1,5 +1,2 @@
 [clients]
 target-host
-
-[clients:vars]
-ansbile_host=centos
